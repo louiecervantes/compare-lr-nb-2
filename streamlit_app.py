@@ -55,7 +55,7 @@ def app():
         
     if st.button('Start'):
         
-        df = pd.read_csv('binary_data.csv', header=None)
+        df = pd.read_csv('binary_data.csv', header=0)
         
         st.subheader('The Dataset')
         # display the dataset
