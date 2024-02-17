@@ -78,7 +78,7 @@ def app():
         st.subheader('Performance Metrics')
         st.text(classification_report(y_test, y_test_pred))
         st.subheader('VIsualization')
-        visualize_classifier(clf, X, y)
+        visualize_classifier(clf, X_test, y_test_pred)
 
 def visualize_classifier(classifier, X, y, title=''):
     # Define the minimum and maximum values for X and Y
