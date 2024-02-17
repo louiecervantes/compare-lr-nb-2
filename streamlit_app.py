@@ -55,8 +55,7 @@ def app():
         
     if st.button('Start'):
         
-        df = pd.read_csv('data_decision_trees.csv', header=None)
-        # st.dataframe(df, use_container_width=True)  
+        df = pd.read_csv('binary_data.csv', header=None)
         
         st.subheader('The Dataset')
         # display the dataset
@@ -106,10 +105,10 @@ def visualize_classifier(classifier, X, y, title=''):
     ax.set_title(title)
     
     # Choose a color scheme for the plot
-    ax.pcolormesh(x_vals, y_vals, output, cmap=plt.cm.gray)
+    ax.pcolormesh(x_vals, y_vals, output, cmap="OrRd")
     
     # Overlay the training points on the plot
-    ax.scatter(X[:, 0], X[:, 1], c=y, s=75, edgecolors='black', linewidth=1, cmap=plt.cm.Paired)
+    ax.scatter(X[:, 0], X[:, 1], c=y, s=75, edgecolors='black', linewidth=1, cmap="gist_rainbow")
     
     # Specify the boundaries of the plot
     ax.set_xlim(x_vals.min(), x_vals.max())
